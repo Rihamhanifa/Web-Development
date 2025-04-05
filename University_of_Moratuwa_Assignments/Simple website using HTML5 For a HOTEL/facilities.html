@@ -1,0 +1,529 @@
+<!-- Facilities -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities - ARH Hotel & Resort</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: #1a3e72;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .hotel-name {
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem;
+        }
+        
+        .hotel-name span {
+            font-size: 1.2rem;
+            display: block;
+            font-style: italic;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #2c5ba3;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: #1a3e72;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #1a3e72;
+            padding-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .facility {
+            margin-bottom: 3rem;
+        }
+        
+        .facility-content {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+        }
+        
+        .facility-text {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .facility-text ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .facility-text li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .facility-image {
+            flex: 1;
+        }
+        
+        .facility-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .room-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .room-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .room-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .room-info {
+            padding: 1.5rem;
+        }
+        
+        .room-info h3 {
+            color: #1a3e72;
+            margin-bottom: 0.8rem;
+        }
+        
+
+        footer {
+            background: linear-gradient(135deg, #0a2a5a 0%, #1a3e72 100%);
+            color: #fff;
+            padding: 4rem 2rem 1rem;
+            position: relative;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #ffcc00;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: #ffcc00;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo .logo {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .footer-logo .hotel-name {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .footer-logo .hotel-name span {
+            font-size: 1rem;
+            display: block;
+            font-style: italic;
+            color: #ffcc00;
+        }
+
+        .contact-details p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+            color: #ffcc00;
+            width: 20px;
+            text-align: center;
+        }
+
+        .quick-links ul {
+            list-style: none;
+        }
+
+        .quick-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .quick-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .quick-links a:hover {
+            color: #ffcc00;
+            transform: translateX(5px);
+        }
+
+        .quick-links i {
+            margin-right: 8px;
+            font-size: 0.8rem;
+            color: #ffcc00;
+        }
+
+        .footer-form .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .footer-form input,
+        .footer-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+        }
+
+        .footer-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .footer-form button {
+            background: #ffcc00;
+            color: #1a3e72;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-form button:hover {
+            background: #e6b800;
+            transform: translateY(-2px);
+        }
+
+        .subscribe-form {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            background: rgba(255,255,255,0.9);
+        }
+
+        .subscribe-form button {
+            background: #ffcc00;
+            color: #1a3e72;
+            border: none;
+            padding: 0 1.2rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .subscribe-form button:hover {
+            background: #e6b800;
+        }
+
+        .social-media h4 {
+            margin-bottom: 1rem;
+            color: #ffcc00;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #ffcc00;
+            color: #1a3e72;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-section {
+                margin-bottom: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/logo/LOGO.jpg" alt="ARH Hotel & Resort Logo" class="logo">
+            <div class="hotel-name">
+                ARH <span>Hotel & Resort</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="banquets-section">
+            <h2>Banquets</h2>
+            <div class="facility">
+                <div class="facility-content">
+                    <div class="facility-text">
+                        <p>Our elegant banquet facilities are perfect for weddings, corporate events, and special celebrations. With customizable layouts and professional event planning services, we can accommodate events of all sizes.</p>
+                        <ul>
+                            <li><b>Grand Ballroom (Capacity: 300 guests)</b></li>
+                            <li><b>Emerald Hall (Capacity: 150 guests)</b></li>
+                            <li><b>Garden Pavilion (Capacity: 100 guests)</b></li>
+                            <li><b>Full-service catering with customizable menus</b></li>
+                            <li><b>Professional event planning team</b></li>
+                            <li><b>State-of-the-art audio/visual equipment</b></li>
+                            <li><b>Custom lighting and decor options</b></li>
+                        </ul>
+                    </div>
+                    <div class="facility-image">
+                        <img src="Images/Banquets/Banquets3.jpg" alt="Banquet Hall">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="rooms-section">
+            <h2>Rooms & Suites</h2>
+            <div class="facility">
+                <p><h3>Experience unparalleled comfort in our beautifully appointed guest rooms and suites. Each space is designed with your relaxation in mind, featuring premium amenities and thoughtful touches.</h3></p>
+                
+                <div class="room-types">
+                    <div class="room-card">
+                        <img src="Images/Room/room1.jpg" alt="Deluxe Room">
+                        <div class="room-info">
+                            <h3>Deluxe Room</h3>
+                            <p><b>Spacious rooms with king or twin beds, work desk, and modern amenities. 350 sq ft.</b></p>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card">
+                        <img src="Images/Room/room2.jpg" alt="Executive Suite">
+                        <div class="room-info">
+                            <h3>Executive Suite</h3>
+                            <p><b>Separate living area, premium furnishings, and enhanced amenities. 550 sq ft.</b></p>
+                        </div>
+                    </div>
+                    
+                    <div class="room-card">
+                        <img src="Images/Room/room3.jpg" alt="Presidential Suite">
+                        <div class="room-info">
+                            <h3>Presidential Suite</h3>
+                            <p><b>Luxurious two-bedroom suite with panoramic views and butler service. 1200 sq ft.</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <div class="footer-logo">
+                    <img src="Images/logo/LOGO.jpg" alt="ARH Hotel & Resort Logo" class="logo">
+                    <div class="hotel-name">ARH <span>Hotel & Resort</span></div>
+                </div>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 12/112C, Chalambaikerny-04, Central Camp</p>
+                    <p><i class="fas fa-phone"></i> 0670418618</p>
+                    <p><i class="fas fa-envelope"></i> ARHHotel@gmail.com</p>
+                </div>
+            </div>
+    
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="facilities.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact-form">
+                <h3>Send Us a Message</h3>
+                <form class="footer-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+    
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive special offers and updates</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe <i class="fas fa-bell"></i></button>
+                </form>
+                <div class="social-media">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/rifadhriham" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/riham_arh/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 ARH Hotel & Resort. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
