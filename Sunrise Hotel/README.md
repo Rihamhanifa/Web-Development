@@ -13,35 +13,6 @@ A **modern website** for **Sunrise Hotel**, built with **HTML5**, **CSS3**, and 
 
 ---
 
-## 📁 Project Structure
-
-Sunrise-Hotel-Website/
-│
-├── index.html # Main homepage
-├── rooms.html # Rooms & Facilities page
-├── dining.html # Dining & Services page
-├── testimonials.html # Testimonials page
-├── contact.html # Contact Us page
-│
-├── images/ # Image assets folder
-│ ├── logo.png
-│ ├── hero-banner.jpg
-│ ├── deluxe-room.jpg
-│ ├── executive-suite.jpg
-│ ├── family-room.jpg
-│ └── ... (other images)
-│
-├── css/
-│ └── style.css # Main stylesheet
-│
-├── js/
-│ └── script.js # JavaScript functionality
-│
-└── README.md # This file
-
-
----
-
 ## 🚀 Pages Overview
 
 ### 🏠 Home Page
@@ -125,7 +96,11 @@ Sunrise-Hotel-Website/
 
 ---
 
-👨‍💻 Developer
+## 👨‍💻 Developer
 
 Developed by [MHR Ahamed]
 
+
+## 📄 License
+
+This project was created for educational purposes as part of the  Web Design course.
